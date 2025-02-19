@@ -1,0 +1,35 @@
+/* ------------------ evans custom ------------------------*/
+
+:root {
+    --toolbarbutton-border-radius: 12px !important;
+}
+
+/* compact nav bar button spacing */
+#nav-bar .toolbarbutton-1 {
+    padding: 0px !important;
+}
+
+:root {
+    --tab-min-height: 30px !important;
+    --newtab-margin: -5px 0px -5px -5px !important;
+}
+
+/* Center URL bar text input */
+#urlbar-input {
+transition: transform .1s linear;
+transform: translateX(50%);
+top: 4px;
+position: absolute;
+width: 50%;
+text-align: center !important;
+}
+
+/* Unless text input is selected like safari*/
+#urlbar[focused] #urlbar-input {
+position: absolute;
+transform: translateX(0);
+transition: all .1s ease;
+width: 100%;
+text-align: left !important;
+}
+
