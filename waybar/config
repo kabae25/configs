@@ -12,8 +12,9 @@
     },
 
     "battery": {
-        "format": "  {capacity}%",
-        "format-charging": " {capacity}%",
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}%  ",
+        "format-icons": ["", "", "", "", ""],
         "tooltip": true
     },
 
@@ -28,13 +29,13 @@
         "interval": 60,
         "tooltip": true,
         "format": "{:%I:%M %p}",
-        "tooltip-format": "{:%Y-%m-%d}",
+        "tooltip-format": "{:%Y-%m-%d}"
     },
     
     "wireplumber": {
         "interval": 1,
         "format": "{volume}% {icon}",
-        "format-muted": "‹MUTE› ",
+        "format-muted": "‹MUTE›   ",
         "on-click": "helvum",
         "format-icons": ["", "", ""]
     },
@@ -42,9 +43,9 @@
     "network": {
         "interface": "wlp82s0",
         "format": "{ifname}",
-        "format-wifi": "‹{essid}› ",
+        "format-wifi": "‹{essid}›   ",
         "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-        "format-disconnected": "No Network", //An empty format will hide the module.
+        "format-disconnected": "No Network",
         "tooltip-format": "{ifname} via {gwaddr} 󰊗",
         "tooltip-format-wifi": "{essid} {signalStrength}% ",
         "tooltip-format-ethernet": "{ifname} ",
