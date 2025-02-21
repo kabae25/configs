@@ -1,0 +1,54 @@
+{
+    "layer": "top",
+    "position": "top", 
+    "height": 24, 
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["wireplumber","backlight","network", "battery"],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate"
+    },
+
+    "battery": {
+        "format": "  {capacity}%",
+        "format-charging": " {capacity}%",
+        "tooltip": true
+    },
+
+    "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""]
+    },
+
+
+    "clock": {
+        "interval": 60,
+        "tooltip": true,
+        "format": "{:%I:%M %p}",
+        "tooltip-format": "{:%Y-%m-%d}",
+    },
+    
+    "wireplumber": {
+        "interval": 1,
+        "format": "{volume}% {icon}",
+        "format-muted": "‹MUTE› ",
+        "on-click": "helvum",
+        "format-icons": ["", "", ""]
+    },
+
+    "network": {
+        "interface": "wlp82s0",
+        "format": "{ifname}",
+        "format-wifi": "‹{essid}› ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-disconnected": "No Network", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} {signalStrength}% ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    }
+}
